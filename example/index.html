@@ -1,0 +1,25 @@
+<!doctype html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content=""/>
+    <base href="http://localhost/">
+    <link href="jquery-ui-1.10.4.min.css,jquery-virtualKeyboard.css" rel="stylesheet">
+    <script src='jquery-2.1.0.min.js,jquery-ui-1.10.4.min,jquery.virtualKeyboard.min.js'></script>
+    <script>
+        $('#email').virtualKeyboard({
+            id: 'keyboard_content', 
+            keyboard: 'azerty'
+        });
+    </script>
+ </head>
+<body>
+    <form autocomplete='off' method='post' action='#' novalidate='novalidate'>
+        <label for='email' id='emailLabel'></label>
+        <input type='email' id='email' name='email' value=''><br/>
+        <textarea id='myText'></textarea><br/>
+    </form>  
+</body>
+</html>  
