@@ -5,24 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="description" content="" />
     <meta name="keywords" content=""/>
-    <base href="http://localhost/">
-    <link href="jquery-ui-1.10.4.min.css" rel="stylesheet">
-    <link href="jquery-virtualKeyboard.css" rel="stylesheet">
-    <script src='jquery-2.1.0.min.js'></script>
-    <script src='jquery-ui-1.10.4.min'></script>
-    <script src='jquery.virtualKeyboard.min.js'></script>
+    <link href="assets/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="assets/css/jquery-virtualKeyboard.css" rel="stylesheet">
+    <script src='assets/js/jquery-2.1.0.min.js'></script>
+    <script src='assets/js/jquery-ui-1.10.4.min.js'></script>
+    <script src='assets/js/jquery.virtualKeyboard.min.js'></script>
     <script>
-        $('#email').virtualKeyboard({
-            id: 'keyboard_content', 
-            keyboard: 'azerty'
+        $(document).ready(function(){
+            $('#email').virtualKeyboard({
+                id: 'keyboard_content', 
+                keyboard: 'azerty',
+                nextField: '#myText'
+            });
+            
+            $('#myText').virtualKeyboard({
+                id: 'keyboard_textarea', 
+                keyboard: 'qwerty'
+            });            
         });
     </script>
  </head>
 <body>
-    <form autocomplete='off' method='post' action='#' novalidate='novalidate'>
-        <label for='email' id='emailLabel'></label>
-        <input type='email' id='email' name='email' value=''><br/>
+    <form autocomplete='off' method='post'>
+        <label for='email' id='emailLabel'>Email:</label>
+        <input type='email' id='email' name='email' value='' style="width:250px;">
+        <br/><br/>
+        <label for='myText' id='myTextLabel'>Text:</label>
         <textarea id='myText'></textarea><br/>
     </form>  
 </body>
+
 </html>  

@@ -17,6 +17,14 @@ NB: By default, the keyboard will appear on focus to "email field".
         keyboard: 'azerty' //qwerty allowed
     });
 
+Same than before, but we allow here to switch to another input field. When you'll hit the "tab" button, the specified field will get the focus with keyboard.
+
+    $('#email').virtualKeyboard({
+        id: 'keyboard_content', 
+        keyboard: 'azerty', //qwerty allowed
+        nextField: '#myField'
+    });
+
 Full options, we will create a draggable qwerty keyboard inside a keyboard_content div, which will appear when "email" field got focus. 
 The ul list will have "keyboard_content_ul", make sure to adapt your css.
 
